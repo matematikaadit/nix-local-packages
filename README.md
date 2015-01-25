@@ -9,14 +9,14 @@ Nix Local Packages Repository
 
 ## Usage
 
-- Put your software derivation in the repo. See [vis/default.nix](vis/default.nix) for
-  example.
-- Import it in [default.nix](default.nix) file, it's recommended to use `callPackage`
-  function from `<nixpkgs>`.
+- Put your derivation declaration in the repo. See
+  [vis/default.nix](vis/default.nix) for example.
+- Import it in [default.nix](default.nix) file, it's recommended to use
+  `callPackage` function from `<nixpkgs>`.
 - Install the derivation to your current profile using this command: `nix-env
   -iA local.packageName`.  Replace `packageName` with the real attribute
-  declared in the [default.nix](default.nix). Note that the derivation was put under
-  `local` attribute since we named our link `local` in the installation
+  declared in the [default.nix](default.nix). Note that the derivation was put
+  under `local` attribute since we named our link `local` in the installation
   process.
 - Now, your derivation will be available in your current profile. If it
   provides an executable, it'll avaialble in your current path.
