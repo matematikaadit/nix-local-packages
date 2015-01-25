@@ -5,7 +5,7 @@ Nix Local Packages Repository
 ## Installation
 
     $ git clone git@github.com:matematikaadit/nix-local-packages.git
-    $ ln -s /path/to/the/cloned/localpkgs ~/.nix-defexpr/local
+    $ make
 
 ## Usage
 
