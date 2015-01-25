@@ -4,7 +4,7 @@ TARGET="$HOME/.nix-defexpr/local"
 SOURCE="$(pwd)"
 
 if [ -e "$TARGET" ]; then
-  echo "Target file, $TARGET, exist."
+  echo "Target file ($TARGET) exist..."
   echo -n "Do you wanna delete it (y/n)? "
   read yesno
   if [ "$yesno" = "Y" -o "$yesno" = "y" ]; then
@@ -15,5 +15,6 @@ if [ -e "$TARGET" ]; then
   fi
 fi
 
-ln -s $SOURCE $TARGET
+echo "Creating link for '$SOURCE' in '$TARGET'"
+ln -s "$SOURCE" "$TARGET"
 echo "Installation success."
