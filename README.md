@@ -4,8 +4,8 @@ Nix Local Packages Repository
 
 ## Installation
 
-    $ git clone git@github.com:matematikaadit/nix-local-packages.git
-    $ make
+    git clone git@github.com:matematikaadit/nix-local-packages.git
+    make
 
 ## Usage
 
