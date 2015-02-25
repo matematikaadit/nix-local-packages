@@ -1,11 +1,11 @@
 { stdenv, fetchurl, ncurses }:
 
 stdenv.mkDerivation rec {
-  version = "0.0.1+git.c6910b0";
+  version = "0.0.1+2.git.1540d03";
   name = "vis-${version}";
   src = fetchurl {
-    url = http://repo.or.cz/w/vis.git/snapshot/c6910b03fbc8b7978369900dc571d758de3ef844.tar.gz;
-    md5 = "961b36d14c3289cd9139c167b671c835";
+    url = http://repo.or.cz/w/vis.git/snapshot/1540d03c9745bbde26e46722782d618b4345c903.tar.gz;
+    sha256 = "1vh2szz6x69mxhjk5vsf361bf0glwg1clmrvw3b6c81dmz5p9753";
   };
   buildInputs = [ ncurses ];
   installFlags = "PREFIX=$(out)";
