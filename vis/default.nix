@@ -1,11 +1,12 @@
-{ stdenv, fetchurl, ncurses }:
+{ stdenv, fetchgit, ncurses }:
 
 stdenv.mkDerivation rec {
-  version = "0.0.1+6.git.9d001da";
+  version = "0.r416.g287521c";
   name = "vis-${version}";
-  src = fetchurl {
-    url = http://repo.or.cz/w/vis.git/snapshot/9d001dabd161c6db3c631bd34712111fbf7ea942.tar.gz;
-    sha256 = "0v5ck8cr5aycl6ycic7b70nfwva2s0mcylvmmh08x9xagb9d8zv5";
+  src = fetchgit {
+    url = https://github.com/martanne/vis.git;
+    rev = "287521c";
+    sha256 = "b72fb7d1e5313627e89131e4fc0104edbc93c93115d73e83abdba1357f63dfc2";
   };
   buildInputs = [ ncurses ];
   installFlags = "PREFIX=$(out)";
