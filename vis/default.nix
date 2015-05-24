@@ -1,14 +1,14 @@
 { stdenv, fetchgit, ncurses }:
 
 stdenv.mkDerivation rec {
-  revcount = "419";
-  revhash = "2c84ecf";
-  version = "0.r${revcount}.g${revhash}";
+  rev = "11129f3";
+  revcount = "429";
+  version = "0.r${revcount}.g${rev}";
   name = "vis-${version}";
   src = fetchgit {
     url = https://github.com/martanne/vis.git;
-    rev = revhash;
-    sha256 = "c77aa03e6082a1e2446b66e6563dd9005491c014996794bb2a646aa86bedd8bb";
+    inherit rev;
+    sha256 = "b8fb643c7410577d77c495210f6c06d3d89dbaf92d8fec7452925cd2b5eb1e71";
   };
   makeFlags = "VERSION=$(version) PREFIX=$(out)";
   buildInputs = [ ncurses ];

@@ -1,7 +1,7 @@
 set -e
 
 TARGET="$HOME/.nix-defexpr/local"
-SOURCE="$(pwd)"
+SOURCE="$( cd -P "$( dirname "$0" )" && pwd )"
 
 if [ -e "$TARGET" ]; then
   if [ "$(readlink $TARGET)" = "$SOURCE" ]; then
