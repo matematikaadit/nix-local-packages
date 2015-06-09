@@ -4,4 +4,5 @@ with (import <nixpkgs> {});
   surf = callPackage ./surf { webkit = webkitgtk2; };
   go = callPackage ./go { inherit (darwin) Security; };
   dart = callPackage ./dart {};
+  yuicompressor-bin = callPackage ./yuicompressor-bin {};
 }
