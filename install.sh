@@ -14,7 +14,7 @@ if [ -e "$TARGET" ]; then
     if [ "$yesno" = "Y" -o "$yesno" = "y" ]; then
       rm -f "$TARGET"
     else
-      echo "Exiting installation..."
+      echo "Aborting installation..."
       exit 1
     fi
   fi
